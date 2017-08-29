@@ -1,9 +1,7 @@
 import React from 'react';
+import Accordion from '../components/accordion.js';
 
 
-const CVPage = () => 
-  <div className="cv">
-    CV Info goes here
-  </div>;
+const CVPage = () => <Accordion />;
 
 export default CVPage;
