@@ -1,0 +1,17 @@
+.accordion {
+  border:red 1px solid;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.Collapsible {
+  display: flex;
+  flex-direction: column;
+  border: green 1px solid;
+}
+
+.Collapsible__trigger {
+  background-color: blue;
+  flex-basis: 100%;
+}

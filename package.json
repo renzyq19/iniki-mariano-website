@@ -7,7 +7,11 @@
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-react-helmet": "^1.0.3",
-    "react-collapsible": "^2.0.0"
+    "gatsby-plugin-sass": "^1.0.6",
+    "gatsby-plugin-typography": "^1.7.7",
+    "react-collapsible": "^2.0.0",
+    "typography-theme-bootstrap": "^0.15.10",
+    "typography-theme-fairy-gates": "^0.15.11"
   },
   "keywords": [
     "gatsby"
