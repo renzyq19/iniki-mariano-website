@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Iniki Mariano - Actor`
   },
   plugins: [
     `gatsby-plugin-sass`,
