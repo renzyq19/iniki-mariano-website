@@ -1,0 +1,40 @@
+.accordion {
+  width:80%;
+  padding: 1rem 2rem;
+  border:red 1px solid;
+  background: purple;
+  display: flex;
+  flex-direction: column;
+}
+
+.Collapsible {
+  .is-*{
+    transition:.5s all ease-out;
+  }
+  .is-closed:before {
+    font-family: FontAwesome;
+    content: '\f067';
+    transform: rotate(-90deg);
+  }
+
+  .is-open:before {
+    font-family: FontAwesome;
+    content: '\f068';
+    transform: rotate(90deg);
+  }
+
+  display: flex;
+  flex-direction: column;
+  border: green 1px solid;
+}
+
+.Collapsible__trigger {
+  background-color: blue;
+  flex-basis: 100%;
+}
+
+.collapsible-title {
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+}

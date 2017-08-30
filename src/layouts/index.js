@@ -13,6 +13,9 @@ const TemplateWrapper = ({ children }) =>
         { name: 'description', content: 'Acting Portfolio' },
         { name: 'keywords', content: 'actor, actress, film, theatre' },
       ]}
+      link={[
+        { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
+      ]}
     />
     <div>
       {children()}

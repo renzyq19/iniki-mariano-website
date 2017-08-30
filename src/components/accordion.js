@@ -1,7 +1,7 @@
 import React from 'react';
 import Collapsible from 'react-collapsible';
 import PropTypes from 'prop-types';
-import './accordion.css';
+import './accordion.scss';
 
 
 const Accordion =  props => 
@@ -17,6 +17,7 @@ const Fold = props =>
   <Collapsible trigger={props.content.trigger}>
     <p>{props.content.text}</p>
   </Collapsible>;
+
 
 Fold.propTypes = {
   content: PropTypes.shape({
