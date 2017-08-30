@@ -1,14 +1,32 @@
 import React from 'react';
 import Accordion from '../components/accordion.js';
 
-var content = (trigger, text) => ({trigger,text});
+const is = [
+  "http://unsplash.it/200",
+  "http://unsplash.it/200",
+  "http://unsplash.it/200",
+];
+var play = (title, text, imageURLs) => {
+  const images=
+    <div className='content-images' >
+      {imageURLs.map(url => <img src={url} />)}
+    </div>;
+
+  const inner =
+    <div className='content' >
+      <p>{text} </p>
+      {images} 
+    </div>;
+  
+  return {title, inner};
+};
 
 const testData = [
-  content('The Crucible', 'Mary Warren'),
-  content('The Crucible', 'Mary Warren'),
-  content('The Crucible', 'Mary Warren'),
-  content('The Crucible', 'Mary Warren'),
-  content('The Crucible', 'Mary Warren'),
+  play('The Crucible', 'Mary Warren',is ),
+  play('The Crucible', 'Mary Warren',is ),
+  play('The Crucible', 'Mary Warren',is ),
+  play('The Crucible', 'Mary Warren',is ),
+  play('The Crucible', 'Mary Warren',is ),
 ];
 
 

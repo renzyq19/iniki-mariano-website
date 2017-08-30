@@ -14,8 +14,8 @@ Accordion.propTypes = {
 };
 
 const Fold = props => 
-  <Collapsible trigger={props.content.trigger}>
-    <p>{props.content.text}</p>
+  <Collapsible trigger={props.content.title}>
+    {props.content.inner}
   </Collapsible>;
 
 
