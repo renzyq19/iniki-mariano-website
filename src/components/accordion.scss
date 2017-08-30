@@ -8,28 +8,33 @@
 }
 
 .Collapsible {
-  .is-*{
-    transition:.5s all ease-out;
-  }
-  .is-closed:before {
-    font-family: FontAwesome;
-    content: '\f067';
-    transform: rotate(-90deg);
-  }
-
-  .is-open:before {
-    font-family: FontAwesome;
-    content: '\f068';
-    transform: rotate(90deg);
-  }
 
   display: flex;
   flex-direction: column;
-  border: green 1px solid;
 }
 
 .Collapsible__trigger {
-  background-color: blue;
+  &:before{
+    font-family: FontAwesome;
+    content: '\f107';
+    display: block;
+    float: left;
+    padding-right: 1rem;
+    transition: transform 300ms;
+    transform-origin: 20%;
+  }
+
+  &.is-closed {
+    &:before {
+    }
+  }
+
+  &.is-open{
+    &:before {
+      transform: rotateZ(180deg);
+    }
+  }
+
   flex-basis: 100%;
 }
 
