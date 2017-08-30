@@ -9,7 +9,7 @@ const is = [
 var play = (title, text, imageURLs) => {
   const images=
     <div className='content-images' >
-      {imageURLs.map(url => <img src={url} />)}
+      {imageURLs.map((url,i) => <img key={i} src={url} />)}
     </div>;
 
   const inner =
