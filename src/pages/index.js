@@ -5,9 +5,6 @@ import headshot from '../images-common/headshot.jpg';
 import './index.scss';
 import bgvideo from '../video/movie.mp4';
 
-import Overlay from '../components/overlay';
-
-
 
 const IndexPage = () => {
   const closePlay = () => {

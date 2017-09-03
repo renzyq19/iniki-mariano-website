@@ -23,7 +23,7 @@
   visibility: hidden;
   background: rgba(white,0.2);
   flex-grow: 9;
-  transition: all 1s ease-in;
+  transition: visibility .5s linear;
 }
 
 .content-close {
