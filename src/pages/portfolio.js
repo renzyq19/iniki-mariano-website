@@ -8,12 +8,12 @@ const is = [
 ];
 var play = (title, text, imageURLs) => {
   const images=
-    <div className='content-images' >
+    <div className='play-images' >
       {imageURLs.map((url,i) => <img key={i} src={url} />)}
     </div>;
 
   const inner =
-    <div className='content' >
+    <div className='play-content' >
       <p>{text} </p>
       {images} 
     </div>;
