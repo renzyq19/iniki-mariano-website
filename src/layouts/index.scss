@@ -25,22 +25,26 @@ body {
   &.open {
     visibility:visible
   }
-  display: flex;
-  justify-content: flex-end;
   visibility: hidden;
   background: rgba(white,0.2);
-  flex-grow: 9;
+  flex-grow: 3;
   transition: visibility .5s linear;
+  position: relative;
+  display: flex;
 }
 .content-inner {
-  flex-grow:9;
+  flex-grow:1;
+  display: flex;
 }
 
 
 .content-close {
-  font-family:FontAwesome;
+  position:absolute;
+  z-index: 3;
+  right: -50px;
+  top: -10px;
+  text-decoration: none;
   color: $offwhite;
-  cursor: pointer;
   padding: 5px;
   width:40px;
   height:40px;

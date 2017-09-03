@@ -60,9 +60,9 @@ const TemplateWrapper = ({ children }) =>
           <div className='content-inner'>
             {children()}
           </div>
-          <div className='content-close' onClick={closePlay}>
+          <Link to='/' onClick={closePlay} className='content-close'>
             <i className="fa fa-close" aria-hidden="true"></i>
-          </div>
+          </Link>
         </div>
         <div className='jam'>
           <div className='nav'>
