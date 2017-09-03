@@ -23,6 +23,7 @@ const IndexPage = () => {
       </h1>
       <div className='content' >
         <div className='content-close' onClick={closePlay}>
+          <i className="fa fa-close" aria-hidden="true"></i>
         </div>
       </div>
       <div className='jam'>
