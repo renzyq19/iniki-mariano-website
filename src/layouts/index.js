@@ -7,27 +7,26 @@ import headshot from '../images-common/headshot.jpg';
 
 import './index.scss';
 
-const NavLink = props => {
-  const pauseOpen = () => {
-    const video = document.querySelector('#bgvideo');
-    const content = document.querySelector('.content');
-    console.log(video);
-    video.pause();
-    video.classList.add('stopFade');
-    content.classList.add('open');
-  };
-  return (
+const NavLink = props => 
     <div>
-      <Link to='#' onClick={pauseOpen}>
+      <Link to={props.to} onClick={pauseOpen}>
         {props.children}
       </Link>
-    </div>);
-};
+    </div>;
 
 
   
 NavLink.propTypes = {
   to: PropTypes.string,
+};
+
+const pauseOpen = () => {
+  const video = document.querySelector('#bgvideo');
+  const content = document.querySelector('.content');
+  console.log(video);
+  video.pause();
+  video.classList.add('stopFade');
+  content.classList.add('open');
 };
 
 const closePlay = () => {
@@ -63,13 +62,13 @@ const TemplateWrapper = ({ children }) =>
             <i className="fa fa-close" aria-hidden="true"></i>
           </div>
         </div>
-      </div>
-      <div className='jam'>
-        <div className='nav'>
-          <NavLink to='/portfolio/'>Portfolio</NavLink>
-          <NavLink to='/showreel/'>Showreel</NavLink>
-          <NavLink to='/bio/'>Bio</NavLink>
-          <NavLink to='/contact/'>Contact</NavLink>
+        <div className='jam'>
+          <div className='nav'>
+            <NavLink to='/portfolio/'>Portfolio</NavLink>
+            <NavLink to='/showreel/'>Showreel</NavLink>
+            <NavLink to='/bio/'>Bio</NavLink>
+            <NavLink to='/contact/'>Contact</NavLink>
+          </div>
         </div>
       </div>
     </div>
