@@ -1,37 +1,39 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import headshot from '../images-common/headshot.jpg';
-import styles from './index.module.css';
+import './index.scss';
+import bgvideo from '../video/movie.mp4';
 
 const IndexPage = () =>
-  <div className={styles.landing} >
+  <div className='container' >
     <h1 >
-      <Link className={styles.name} >
+      <Link to='#' className='name' >
         Iniki Mariano
       </Link>
     </h1>
-    <ul className={styles.nav}>
-      <li>
-        <Link to='/portfolio/'>
-          Portfolio
-        </Link>
-      </li>
-      <li>
-        <Link to='/showreel/'>
-          Showreel
-        </Link>
-      </li>
-      <li>
-        <Link to='/bio/'>
-          Bio
-        </Link>
-      </li>
-      <li>
-        <Link to='/contact/'>
-          Contact
-        </Link>
-      </li>
-    </ul>
+    <video poster={headshot} id='bgvideo' playsInline autoPlay muted loop >
+      <source src={bgvideo} type='video/mp4' />
+    </video>
+    <div className='content'>
+      <div className='nav'>
+        <NavLink to='/portfolio/'>Portfolio</NavLink>
+        <NavLink to='/showreel/'>Showreel</NavLink>
+        <NavLink to='/bio/'>Bio</NavLink>
+        <NavLink to='/contact/'>Contact</NavLink>
+      </div>
+    </div>
   </div>;
+
+const NavLink = props => 
+      <div>
+        <Link to={props.to}>
+          {props.children}
+        </Link>
+      </div>;
+  
+NavLink.propTypes = {
+  to: PropTypes.string,
+};
 
 export default IndexPage;
