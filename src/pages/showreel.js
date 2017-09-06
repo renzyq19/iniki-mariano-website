@@ -4,7 +4,7 @@ import './showreel.scss';
 
 const Showreel = () =>
   <div className='showreel'>
-    <iframe src="https://player.vimeo.com/video/216029754" allowfullscreen />
+    <iframe src="https://player.vimeo.com/video/216029754" allowFullScreen />
   </div>;
 
 export default Showreel;
